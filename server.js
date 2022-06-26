@@ -8,7 +8,12 @@ const MongoClient = require('mongodb').MongoClient
 
 app.use(cors())
 // middleware - helps facilitate communication
+
+app.use(express.urlencoded({
+    extended: true
+}))
 app.use(express.json())
+app.use(express.static('public'))
 
 
 MongoClient.connect(connectionString)
