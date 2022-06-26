@@ -4,7 +4,7 @@ document.querySelector('button').addEventListener('click', getFetch)
 const myFavs = document.querySelector('input').value
 const url = `https://fav-movie-api.herokuapp.com/api/${myFavs}`
 
-    fetch(url)
+    getFetch(url)
         .then(res => res.json())
         .then(data => {
             console.log(data)
