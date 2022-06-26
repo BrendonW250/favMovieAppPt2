@@ -6,7 +6,7 @@ async function getFetch(){
     const myFavs = document.querySelector('input').value
 
     try{
-        const response = await fetch(`https://currentfavmovies.herokuapp.com/${myFavs}`)
+        const response = await fetch(`https://currentfavmovies.herokuapp.com/api/${myFavs}`)
         const data = await response.json()
 
         console.log(data)
