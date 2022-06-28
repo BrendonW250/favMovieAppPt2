@@ -1,5 +1,6 @@
 // client side js
 document.querySelector('button').addEventListener('click', getFetch)
+document.querySelector('#add').addEventListener('click', fetch)
 
 
 async function getFetch(){
@@ -30,6 +31,12 @@ async function getFetch(){
         console.log(error)
     }
 }
+
+// function for adding movie to the database
+// async function fetch(){
+
+
+// }
 
 // function getFetch(){
 //     const myFavs = document.querySelector('input').value

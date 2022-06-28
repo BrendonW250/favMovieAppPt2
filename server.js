@@ -38,6 +38,18 @@ MongoClient.connect(connectionString)
 
     })
 
+    app.post('/addMovie', (request, response) => {
+        db.collection('movie-info').insertOne({movieTitle: request.body.movieTitle,
+        dateReleased: request.body.dateReleased, notableCelebs: request.body.notableCelebs, 
+        shortBio: request.body.shortBio, rottenTomatoesRating: request.body.rottenTomatoesRating})
+
+        .then(result => {
+            console.log('Movie Added')
+            response.redirect('/')
+        })
+       
+    })
+
 })
 .catch(error => console.error(error))
 
