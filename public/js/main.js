@@ -1,6 +1,6 @@
 // client side js
 document.querySelector('button').addEventListener('click', getFetch)
-document.querySelector('#add').addEventListener('click', fetch)
+document.querySelector('#add').addEventListener('click', getFetch)
 
 
 async function getFetch(){
