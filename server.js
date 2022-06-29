@@ -14,6 +14,7 @@ require('dotenv').config()
 
 app.use(cors())
 // middleware - helps facilitate communication
+app.set('view engine' ,'ejs')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.urlencoded({
@@ -21,6 +22,7 @@ app.use(express.urlencoded({
 }))
 app.use(express.json())
 app.use(express.static('public'))
+
 
 
 MongoClient.connect(connectionString)
@@ -32,9 +34,10 @@ MongoClient.connect(connectionString)
     
 
     app.get('/', (request, response) => {
-        response.sendFile(__dirname + '/index.html')
+        // response.sendFile(__dirname + '/index.html')
         // const movieCollection = db.collection('movie-info').find().toArray()
         // console.log(movieCollection)
+        response.render('index.ejs', {})
 
     })
 
