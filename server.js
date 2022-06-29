@@ -24,7 +24,8 @@ app.use(express.static('public'))
 MongoClient.connect(dbconnectionStr)
     .then(client => {
         console.log(`Connected to ${dbname} Database`)
-        const db = client.db('favMoviesPt2')
+        db = client.db(dbName)
+        // const db = client.db('favMoviesPt2')
         const movieCollection = db.collection('movie-info')
     
 
