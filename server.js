@@ -50,9 +50,10 @@ MongoClient.connect(connectionString)
     })
 
     app.post('/addMovie', (request, response) => {
-        db.collection('movie-info').insertOne({movieName: request.body.movieName,
-        releaseDate: request.body.releaseDate, notableCeleb1: request.body.notableCeleb1, 
-        movieSummary: request.body.movieSummary, ratingForMovie: request.body.ratingForMovie})
+        // db.collection('movie-info').insertOne({movieName: request.body.movieName,
+        // releaseDate: request.body.releaseDate, notableCeleb1: request.body.notableCeleb1, 
+        // movieSummary: request.body.movieSummary, ratingForMovie: request.body.ratingForMovie})
+        db.collection('movie-info').insertOne(request.body)
 
         .then(result => {
             console.log('Movie Added')
