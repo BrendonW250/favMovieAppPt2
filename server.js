@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = 8000
-// const connectionString = 'mongodb+srv://beazy250:thelegitapp24@cluster0.pyehc.mongodb.net/?retryWrites=true&w=majority'
+const connectionString = 'mongodb+srv://beazy250:thelegitapp24@cluster0.pyehc.mongodb.net/?retryWrites=true&w=majority'
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config()
 
 // let db,
-let dbconnectionStr = process.env.DB_STRING
+// let dbconnectionStr = process.env.DB_STRING
 //     dbName = 'favMoviesPt2'
 
 
@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 
-MongoClient.connect(dbconnectionStr)
+MongoClient.connect(connectionString)
     .then(client => {
         // console.log(`Connected to ${dbname} Database`)
         // db = client.db(dbName)
@@ -48,9 +48,9 @@ MongoClient.connect(dbconnectionStr)
     })
 
     app.post('/addMovie', (request, response) => {
-        db.collection('movie-info').insertOne({movieTitle: request.body.movieTitle,
-        dateReleased: request.body.dateReleased, notableCelebs: request.body.notableCelebs, 
-        shortBio: request.body.shortBio, rottenTomatoesRating: request.body.rottenTomatoesRating})
+        db.collection('movie-info').insertOne({movieName: request.body.movieName,
+        releaseDate: request.body.releaseDate, notableCeleb1: request.body.notableCeleb1, 
+        movieSummary: request.body.movieSummary, ratingForMovie: request.body.ratingForMovie})
 
         .then(result => {
             console.log('Movie Added')
