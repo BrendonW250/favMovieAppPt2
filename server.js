@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = 8000
-const connectionString = 'mongodb+srv://beazy250:thelegitapp24@cluster0.pyehc.mongodb.net/?retryWrites=true&w=majority'
+// const connectionString = 'mongodb+srv://beazy250:thelegitapp24@cluster0.pyehc.mongodb.net/?retryWrites=true&w=majority'
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config()
 
 // let db,
-//     dbconnectionStr = process.env.DB_STRING
+let dbconnectionStr = process.env.DB_STRING
 //     dbName = 'favMoviesPt2'
 
 
@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(express.static('public'))
 
 
-MongoClient.connect(connectionString)
+MongoClient.connect(dbconnectionStr)
     .then(client => {
         // console.log(`Connected to ${dbname} Database`)
         // db = client.db(dbName)
