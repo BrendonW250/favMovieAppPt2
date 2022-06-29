@@ -4,6 +4,7 @@ const cors = require('cors')
 const PORT = 8000
 const connectionString = 'mongodb+srv://beazy250:thelegitapp24@cluster0.pyehc.mongodb.net/?retryWrites=true&w=majority'
 const MongoClient = require('mongodb').MongoClient
+const bodyParser = require('body-parser')
 require('dotenv').config()
 
 // let db,
@@ -14,6 +15,7 @@ require('dotenv').config()
 app.use(cors())
 // middleware - helps facilitate communication
 
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.urlencoded({
     extended: true
 }))
