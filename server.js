@@ -2,13 +2,13 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = 8000
-// const connectionString = 'mongodb+srv://beazy250:thelegitapp24@cluster0.pyehc.mongodb.net/?retryWrites=true&w=majority'
+const connectionString = 'mongodb+srv://beazy250:thelegitapp24@cluster0.pyehc.mongodb.net/?retryWrites=true&w=majority'
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config()
 
-let db,
-    dbconnectionStr = process.env.DB_STRING
-    dbName = 'favMoviesPt2'
+// let db,
+//     dbconnectionStr = process.env.DB_STRING
+//     dbName = 'favMoviesPt2'
 
 
 app.use(cors())
@@ -21,16 +21,19 @@ app.use(express.json())
 app.use(express.static('public'))
 
 
-MongoClient.connect(dbconnectionStr)
+MongoClient.connect(connectionString)
     .then(client => {
-        console.log(`Connected to ${dbname} Database`)
-        db = client.db(dbName)
-        // const db = client.db('favMoviesPt2')
+        // console.log(`Connected to ${dbname} Database`)
+        // db = client.db(dbName)
+        const db = client.db('favMoviesPt2')
         const movieCollection = db.collection('movie-info')
     
 
     app.get('/', (request, response) => {
         response.sendFile(__dirname + '/index.html')
+        // const movieCollection = db.collection('movie-info').find().toArray()
+        // console.log(movieCollection)
+
     })
 
     app.get('/api/:movieName', (request, response) => {
