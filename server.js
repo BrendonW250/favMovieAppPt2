@@ -37,7 +37,7 @@ MongoClient.connect(connectionString)
         // response.sendFile(__dirname + '/index.html')
         // const movieCollection = db.collection('movie-info').find().toArray()
         // console.log(movieCollection)
-        response.render('index.ejs', {})
+        // response.render('index.ejs', {})
 
     })
 
@@ -49,6 +49,8 @@ MongoClient.connect(connectionString)
             response.json(results[0])
         })
         .catch(error => console.error(error))
+
+        response.render('index.ejs', {})
 
     })
 
