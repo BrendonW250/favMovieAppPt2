@@ -34,16 +34,26 @@
     <!-- Adding to my list of favorite movies -->
     <section id="adding-movies">
         <form action="/addMovie" method="POST">
-            <input type="text" placeholder="Movie Name" name="movieName">
-            <input type="text" placeholder="Release Date" name="releaseDate">
+            <!-- input movie title -->
+            <label for="movieTitle">Movie: </label>
+            <input type="text" name="movieTitle">
 
+            <!-- input when movie came out -->
+            <label for="releaseDate">Release Date: </label>
+            <input type="text" name="releaseDate">
+        
+            <!-- input top celebrities that starred in movie -->
             <input type="text" placeholder="Celeb Name" name="notableCeleb1">
             <input type="text" placeholder="Celeb Name" name="notableCeleb2">
             <input type="text" placeholder="Celeb Name" name="notableCeleb3">
 
             <!-- <input type="text" placeholder="Summary Of Movie" name="movieSummary"> -->
-            <textarea name="shortBio">What was the movie about?</textarea>
-            <input type="text" placeholder="Rating" name="ratingForMovie">
+            <label for="shortBio">Movie Summary: </label>
+            <textarea name="shortBio"></textarea>
+            
+            <!-- input movie rating -->
+            <label for="rottenTomatoesRating">Rating: </label>
+            <input type="text" name="rottenTomatoesRating">
 
             <button id="add" type="submit">Add Movie</button>
         </form>
