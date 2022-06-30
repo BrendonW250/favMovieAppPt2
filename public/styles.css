@@ -1,0 +1,13 @@
+
+/* Styling of the form */
+#adding-movies{
+    max-width: 500px;
+    margin: 2rem auto;
+    border: 2px solid red;
+    padding: 2rem;
+
+}
+
+label{
+    display: flex;
+}
