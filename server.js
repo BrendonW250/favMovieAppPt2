@@ -37,7 +37,7 @@ MongoClient.connect(connectionString)
         // response.sendFile(__dirname + '/index.html')
         // const movieCollection = db.collection('movie-info').find().toArray()
         // console.log(movieCollection)
-        // response.render('index.ejs', {})
+        response.render('index.ejs', {})
 
     })
 
@@ -50,7 +50,7 @@ MongoClient.connect(connectionString)
         })
         .catch(error => console.error(error))
 
-        response.render('index.ejs', {})
+        
 
     })
 
@@ -58,12 +58,12 @@ MongoClient.connect(connectionString)
         // db.collection('movie-info').insertOne({movieName: request.body.movieName,
         // releaseDate: request.body.releaseDate, notableCeleb1: request.body.notableCeleb1, 
         // movieSummary: request.body.movieSummary, ratingForMovie: request.body.ratingForMovie})
-        db.collection('movie-info').insertOne(request.body)
+        movieCollection.insertOne(request.body)
 
-        .then(result => {
-            console.log('Movie Added')
-            response.redirect('/')
-        })
+            .then(result => {
+                console.log('Movie Added')
+                response.redirect('/')
+            })
        
     })
 
