@@ -9,14 +9,14 @@
 }
 
 label{
-    display: flex;
+    display: block;
     padding: 1rem 0 .5rem;
     font-size: 16px;
 }
 
 input,
 textarea{
-    display: flex;
+    display: block;
     width: 100%;
     border: 2px solid black;
     padding: 1rem;
