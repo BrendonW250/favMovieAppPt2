@@ -1,7 +1,14 @@
+/* styling for heading on page */
+h1{
+    text-align: center;
+}
+
 
 /* Styling for Search Bar */
 .search-bar{
     width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
 
 }
 
