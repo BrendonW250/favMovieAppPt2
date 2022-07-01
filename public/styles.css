@@ -10,4 +10,27 @@
 
 label{
     display: flex;
+    padding: 1rem 0 .5rem;
+    font-size: 16px;
+}
+
+input,
+textarea{
+    display: flex;
+    width: 100%;
+    border: 2px solid black;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+/* Add button styling */
+#add{
+    background-color: purple;
+    color: white;
+    padding: 5rem;
+    margin: 1rem;
+    width: auto;
+}
+#add:hover{
+    color: blue;
 }
