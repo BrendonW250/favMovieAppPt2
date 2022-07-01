@@ -10,7 +10,7 @@
 
 label{
     display: block;
-    padding: 1rem 0 .5rem;
+    padding: 1rem 0 .25rem;
     font-size: 16px;
 }
 
@@ -19,7 +19,7 @@ textarea{
     display: block;
     width: 100%;
     border: 2px solid black;
-    padding: 1rem;
+    padding: .5rem;
     font-size: 18px;
     border-radius: 5px;
 }
