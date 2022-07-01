@@ -1,4 +1,17 @@
 
+/* Styling for Search Bar */
+.search-bar{
+    width: 500px;
+
+}
+
+.search-button{
+
+}
+
+
+
+
 /* Styling of the form */
 #adding-movies{
     max-width: 500px;
@@ -28,10 +41,12 @@ textarea{
 #add{
     background-color: purple;
     color: white;
-    padding: 5rem;
+    padding: .5rem;
     margin: 1rem;
+    cursor: pointer;
     width: auto;
 }
+
 #add:hover{
     color: blue;
 }
