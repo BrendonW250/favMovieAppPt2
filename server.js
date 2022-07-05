@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const PORT = 8000
-const connectionString = process.env.DB_STRING
 const MongoClient = require('mongodb').MongoClient
 const bodyParser = require('body-parser')
 require('dotenv').config()
+const connectionString = process.env.DB_STRING
 
-console.log(process.env)
+// console.log(process.env)
 
 
 // let db,
@@ -41,6 +41,7 @@ MongoClient.connect(connectionString)
         // const movieCollection = db.collection('movie-info').find().toArray()
         // console.log(movieCollection)
         // response.render('index.ejs', {})
+        // const connectionString = process.env.DB_STRING
 
     })
 
