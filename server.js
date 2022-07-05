@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 require('dotenv').config()
 const connectionString = process.env.DB_STRING
 
-// console.log(process.env)
+console.log(process.env)
 
 
 // let db,
@@ -28,7 +28,7 @@ app.use(express.static('public'))
 
 
 
-MongoClient.connect(connectionString)
+MongoClient.connect(DB_STRING)
     .then(client => {
         // console.log(`Connected to ${dbname} Database`)
         // db = client.db(dbName)
