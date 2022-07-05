@@ -15,9 +15,9 @@ h1{
 .info-from-db{
     text-align: center;
 }
-.info-from-db > p{
-    margin-left: 10px;
-    margin-right: 10px;
+.info-from-db > p::after{
+    content: "\a";
+    white-space: pre;
 }
 
 .search-button{
