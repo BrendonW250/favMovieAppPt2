@@ -4,9 +4,11 @@ const cors = require('cors')
 const PORT = 8000
 const MongoClient = require('mongodb').MongoClient
 const bodyParser = require('body-parser')
-require('dotenv').config()
+const dotenv = require('dotenv').config()
 
-const connectionString = process.env.dbString
+// console.log(dotenv.parsed)
+
+// const connectionString = process.env.dbString
 
 // console.log(process.env)
 
@@ -22,7 +24,7 @@ app.use(cors())
 
 
 
-MongoClient.connect(connectionString, { useUnifiedTopology: true })
+MongoClient.connect(process.env.dbString, { useUnifiedTopology: true })
     .then(client => {
         // console.log(`Connected to ${dbname} Database`)
         // db = client.db(dbName)
