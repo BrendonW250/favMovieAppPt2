@@ -4,9 +4,9 @@ const cors = require('cors')
 const PORT = 8000
 const MongoClient = require('mongodb').MongoClient
 const bodyParser = require('body-parser')
-// require('dotenv').config()
+require('dotenv').config()
 
-const connectionString = process.env.DB_STRING
+const connectionString = process.env.dbString
 
 // console.log(process.env)
 
