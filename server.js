@@ -29,10 +29,11 @@ app.use(express.static('public'))
 
 
 
-MongoClient.connect(connectionString)
+MongoClient.connect(connectionString, { useUnifiedTopology: true })
     .then(client => {
         // console.log(`Connected to ${dbname} Database`)
         // db = client.db(dbName)
+        console.log(`Connected to database`)
         const db = client.db('favMoviesPt2')
         const movieCollection = db.collection('movie-info')
     
