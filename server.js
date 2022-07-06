@@ -20,13 +20,6 @@ app.use(cors())
 // middleware - helps facilitate communication
 // app.set('view engine' ,'ejs')
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(express.urlencoded({
-    extended: true
-}))
-app.use(express.json())
-app.use(express.static('public'))
-
 
 
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
@@ -36,8 +29,18 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         console.log(`Connected to database`)
         const db = client.db('favMoviesPt2')
         const movieCollection = db.collection('movie-info')
-    
 
+        // Middlewares
+        app.use(bodyParser.urlencoded({ extended: true }))
+        app.use(express.urlencoded({
+            extended: true
+        }))
+        app.use(express.json())
+        app.use(express.static('public'))
+
+
+    
+    // Routes
     app.get('/', (request, response) => {
         response.sendFile(__dirname + '/index.html')
         // const movieCollection = db.collection('movie-info').find().toArray()
