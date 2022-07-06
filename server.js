@@ -5,9 +5,10 @@ const PORT = 8000
 const MongoClient = require('mongodb').MongoClient
 const bodyParser = require('body-parser')
 require('dotenv').config()
+
 const connectionString = process.env.DB_STRING
 
-console.log(process.env)
+// console.log(process.env)
 
 
 // let db,
@@ -28,7 +29,7 @@ app.use(express.static('public'))
 
 
 
-MongoClient.connect(DB_STRING)
+MongoClient.connect(connectionString)
     .then(client => {
         // console.log(`Connected to ${dbname} Database`)
         // db = client.db(dbName)
