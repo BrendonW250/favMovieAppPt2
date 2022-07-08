@@ -16,7 +16,7 @@ body::before{
     background-size: cover;
     background-repeat: no-repeat;
     height: 300vh;
-    position: relative;
+    /* position: relative; */
     position: absolute;
     top: 0px;
     right: 0px;
@@ -88,7 +88,7 @@ textarea{
 
 /* Media queries */
 @media (min-width: 300px){
-    #add-movies{
+    #adding-movies{
         width: 150px;
     }
 }
