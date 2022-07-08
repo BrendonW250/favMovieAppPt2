@@ -1,17 +1,35 @@
-
+/* 
 body{
-    background-image: url(images/bgImage4.jpg);
+    background-image: url(images/bgImage2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 300vh;
+    position: relative;
     
+} */
+
+body::before{
+    content: '';
+    background-image: url(images/bgImage2.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300vh;
+    position: relative;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.25;
 }
 
 
 /* styling for heading on page */
 h1{
     text-align: center;
+    position: relative;
 }
 
 
@@ -20,6 +38,7 @@ h1{
     width: 500px;
     margin: 2rem auto;
     padding: 2rem;
+    position: relative;
 
 }
 
