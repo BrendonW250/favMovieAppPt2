@@ -1,3 +1,14 @@
+
+body{
+    background-image: url(images/bgImage1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300vh;
+    
+}
+
+
 /* styling for heading on page */
 h1{
     text-align: center;
