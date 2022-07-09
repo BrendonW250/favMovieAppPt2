@@ -1,4 +1,4 @@
-/* 
+
 body{
     background-image: url(images/bgImage2.jpg);
     background-position: center;
@@ -7,15 +7,15 @@ body{
     height: 300vh;
     position: relative;
     
-} */
+}
 
 body::before{
     content: '';
-    background-image: url(images/bgImage2.jpg);
+    /* background-image: url(images/bgImage2.jpg);
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300vh;
+    height: 300vh; */
     /* position: relative; */
     position: absolute;
     top: 0px;
