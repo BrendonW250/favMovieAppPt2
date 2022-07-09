@@ -87,8 +87,8 @@ textarea{
 }
 
 /* Media queries */
-@media (min-width: 300px){
+/* @media (min-width: 300px){
     #adding-movies{
         width: 150px;
     }
-}
+} */
