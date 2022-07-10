@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My All-Time Favorite Movies</h1>
+    <h1 class="main-heading">My All-Time Favorite Movies</h1>
 
     <section class="search-bar">
+        <h1>Find My Favorites</h1>
         <input type="text" placeholder="Search">
         <button id="search-button" type="submit">Find</button>
     </section>
@@ -41,6 +42,7 @@
     <!-- Adding to my list of favorite movies -->
     <section id="adding-movies">
         <form action="/addMovie" method="POST">
+            <h1>Add New Movie</h1>
             <!-- input movie title -->
             <label for="movieTitle">Movie: </label>
             <input type="text" name="movieTitle">
