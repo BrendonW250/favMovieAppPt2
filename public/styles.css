@@ -144,8 +144,8 @@ textarea{
 
 @media (orientation: portrait){
     body{
-        min-width: 50%;
-        
+        min-width: 50vh;
+
     }
 }
 
