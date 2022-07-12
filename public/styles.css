@@ -144,7 +144,8 @@ textarea{
 
 @media (orientation: portrait) and (max-width: 480px){
    body{
-       max-height: 35vh;
+       background-position: center;
+       background-size: cover;
    }
 }
 
