@@ -142,17 +142,13 @@ textarea{
     }
 }
 
-@media screen and (max-width:787px){
-    .stats{
-        display: none;
-    }
-}
-/* @media (orientation: portrait) and (max-width: 480px){
+
+@media (orientation: landscape) and (max-width: 480px){
    body{
        background-position: center;
        background-size: cover;
    }
-} */
+}
 
 /* for bigger screens */
 /* @media (min-width: 2000px) and (max-width: 2560px){
