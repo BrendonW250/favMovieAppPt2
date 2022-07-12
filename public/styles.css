@@ -43,21 +43,20 @@ body{
 }
 
 /* Find button styling */
-/* .search-bar button{
+.search-bar button{
     
-    background-color: purple;
+    background-color: red;
     color: white;
     padding: .5rem;
     margin: 1rem;
-    margin-left: 2rem;
     cursor: pointer;
-    
-    
-} */
+    width: auto;
+}
 
 /* Incoming data from db styling */
 .info-from-db{
     text-align: center;
+    color: white;
 }
 
 
@@ -69,6 +68,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 #adding-movies form{
     width: 100%;
@@ -76,12 +76,12 @@ body{
     padding: 50px;
     border-radius: 4px;
     box-shadow: 0 8px 16px black;
-    background-color: #749eb7;
+    background-color: #7E5109;
 }
 #adding-movies form h1{
     text-align: center;
     margin-bottom: 24px;
-    color: black;
+    color: white;
 }
 #adding-movies form input{
     width: 100%;
@@ -120,7 +120,7 @@ textarea{
 
 /* Add button styling */
 #add{
-    background-color: purple;
+    background-color: red;
     color: white;
     padding: .5rem;
     margin: 1rem;
