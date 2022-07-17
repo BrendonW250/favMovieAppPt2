@@ -1,10 +1,12 @@
-# favMovieAppPt2
-
-# My Favorite Movies: <a href="https://currentfavmovies.herokuapp.com/"> Visit Here</a>
+# My Favorite Movies
 
 Everyone has a set of movies that whenever someone mentions them or they get played on TV
 they grab a seat and watch it like it's their first time watching it. Well that's how I feel
 about these movies
+
+Link to project: <a href="https://currentfavmovies.herokuapp.com/"> Visit Here</a>
+
+![alt tag](https://github.com/BrendonW250/favMovieAppPt2/blob/main/favMoviesScreenshot.png)
 
 # How It's Made: 
 Tech Used: HTML5, CSS, Javascript, Express, Mongodb
