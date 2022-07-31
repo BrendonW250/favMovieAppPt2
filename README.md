@@ -9,7 +9,7 @@ Link to project: <a href="https://currentfavmovies.herokuapp.com/"> Visit Here</
 ![alt tag](https://github.com/BrendonW250/favMovieAppPt2/blob/main/favMoviesScreenshot.png)
 
 # How It's Made: 
-Tech Used: HTML5, CSS, Javascript, Express, Mongodb
+Tech Used: HTML5, CSS, Javascript, Nodejs, Express, Mongodb
 
 My learning was focused on using my knowledge of HTML, CSS, and Javascript to interact with a database
 that I created on the backend. All that including displaying to the user my current favorite movies that
