@@ -43,6 +43,8 @@ MongoClient.connect(process.env.dbString, { useUnifiedTopology: true })
 
     
     // Routes
+    
+    // Whenever there is '/' that means we will be directed to the homepage
     app.get('/', (request, response) => {
         response.sendFile(__dirname + '/index.html')
         // const movieCollection = db.collection('movie-info').find().toArray()
@@ -52,6 +54,9 @@ MongoClient.connect(process.env.dbString, { useUnifiedTopology: true })
 
     })
 
+    // route for when user enters a movie title that's
+    // already in the db and wants that data to be returned
+    // in JSON format
     app.get('/api/:movieName', (request, response) => {
     const movieNames = request.params.movieName
         movieCollection.find({movieTitle: movieNames}).toArray()
@@ -65,6 +70,9 @@ MongoClient.connect(process.env.dbString, { useUnifiedTopology: true })
 
     })
 
+    // route if user were to add movie to db
+    // connects to the collection in db
+    // and adds everything inputted in field straight to the db
     app.post('/addMovie', (request, response) => {
         db.collection('movie-info').insertOne({movieTitle: request.body.movieTitle,
         dateReleased: request.body.dateReleased, notableCelebs: {name1: request.body.name1, name2: request.body.name2, name3: request.body.name3},//request.body.notableCeleb1, 

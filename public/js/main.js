@@ -4,6 +4,7 @@ document.querySelector('button').addEventListener('click', getFetch)
 
 
 async function getFetch(){
+    // see's what user inputs in the search bar and looks for an object that has that name
     const myFavs = document.querySelector('input').value
 
     try{
